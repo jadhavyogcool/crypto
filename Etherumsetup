@@ -1,0 +1,22 @@
+GO installation
+
+1) wget https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz
+2) sudo tar -xvf go1.9.2.linux-amd64.tar.gz
+3) sudo mv go /usr/local
+4) export GOROOT=/usr/local/go
+5) export GOPATH=$HOME/Projects/Proj1
+6) export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+7) source .bashrc
+
+
+go-ethereum installation
+
+1) git clone https://github.com/ethereum/go-ethereum
+2) git checkout tags/v1.7.3 -b my-ethereumv1.7.3
+3) make all
+
+ethereum run
+
+1) /home/yog/go-ethereum/build/bin/geth --datadir ~/ethereum/net3 init genesis/genesis3.json
+2) /home/yog/go-ethereum/build/bin/geth --datadir ~/ethereum/net3/ --networkid 3 console
+
