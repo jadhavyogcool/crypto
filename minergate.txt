@@ -1,0 +1,49 @@
+Console miner
+
+download tool from minergate
+
+minergate-cli -user YOUR-EMAIL -bcn 2 -fcn+xmr 2
+or
+
+download cpuminer
+
+
+#minerd -o stratum+tcp://bcn.pool.minergate.com:45550 -u USERNAME -p x
+
+BCN 
+stratum+tcp://bcn.pool.minergate.com:45550
+
+XMR 
+stratum+tcp://xmr.pool.minergate.com:45560
+
+XDN 
+stratum+tcp://xdn.pool.minergate.com:45620
+
+QCN 
+stratum+tcp://qcn.pool.minergate.com:45570
+
+FCN 
+stratum+tcp://fcn.pool.minergate.com:45610
+
+MCN 
+stratum+tcp://mcn.pool.minergate.com:45640
+
+AEON
+stratum+tcp://aeon.pool.minergate.com:45690
+
+DSH 
+stratum+tcp://dsh.pool.minergate.com:45720
+
+INF8
+stratum+tcp://inf8.pool.minergate.com:45750
+
+Merged mining with FCN:
+stratum+tcp://fcn-xmr.pool.minergate.com:45590
+stratum+tcp://fcn-qcn.pool.minergate.com:45600
+stratum+tcp://fcn-dsh.pool.minergate.com:45730
+stratum+tcp://fcn-inf8.pool.minergate.com:45760
+
+Merged mining with MCN:
+stratum+tcp://mcn-qcn.pool.minergate.com:45670
+stratum+tcp://mcn-dsh.pool.minergate.com:45740
+stratum+tcp://mcn-inf8.pool.minergate.com:45770
