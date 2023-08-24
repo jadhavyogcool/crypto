@@ -1,0 +1,114 @@
+For this Ethereum Smart Contract tutorial, we will require 5 important applications:
+
+NodeJS
+NPM
+Ethereum
+Truffle
+Solidity Compiler
+
+Installing NodeJS
+$sudo apt-get install nodejs
+
+Installing NPM
+NPM stands for Node Package Manager and is used to run Nodejs applications.
+
+To install NPM, run the following command in your terminal:
+
+$ sudo apt-get install npm
+
+Ethereum is an open-source & public blockchain based, distributed computing platform for building decentralized applications. 
+
+To install Ethereum, run the following command in your terminal:
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository -y ppa:ethereum/ethereum
+$ sudo apt-get update
+$ sudo apt-get install ethereum
+
+Installing Truffle
+Truffle is a Development Environment, Testing Framework and Asset pipeline for Ethereum Blokchains.
+npm install -g truffle
+
+Installing Solidity Compiler
+Solidity is a programming language used to write Smart Contracts. To run smart contracts on our system, we have to install Solidity Compiler.
+
+To install Solidity Compiler, run the following command in your terminal:
+$sudo npm install -g solc
+
+
+Configuring Genesis Block
+A Genesis Block is the start-point of a Blockchain and we need a genesis file to start the Blockchain. In this section of Ethereum Smart Contract, we will write a Genesis file and configure it to allow us to run Smart Contracts. 
+$ mkdir ethereum-network
+$ cd ethereum-network
+$ nano genesis.json
+
+geth --datadir ./datadir account new   //if you want to create preaccounts
+Running the Ethereum Private Network
+$ geth --datadir ./dataDir init ./genesis.json
+
+$ geth --port 4321 --networkid 1234 --datadir=./dataDir  --rpc --rpcport 8543 --rpcaddr 127.0.0.1  --rpcapi "eth,net,web3,personal,miner" --allow-insecure-unlock
+
+$geth --port 4321 --networkid 1234 --datadir=./dataDir  --rpc --rpccorsdomain "https://remix.ethereum.org" console --rpcport 8543 --rpcaddr 127.0.0.1  --rpcapi "eth,net,web3,personal,miner" --allow-insecure-unlock
+
+
+
+Connecting Geth to Ethereum Private Blockchain
+$geth attach http://127.0.0.1:8543
+
+
+
+Creating Ethereum Account
+> personal.newAccount('seedphrase')
+> personal.unlockAccount(web3.eth.coinbase, "seedphrase")
+> miner.start()
+
+> web3.fromWei(eth.getBalance(eth.coinbase), "ether")
+> miner.stop()
+
+
+> eth.gasPrice
+
+
+
+-Creating Ethereum Smart Contract
+Creating Truffle Project
+
+
+$ mkdir truffle
+$ cd truffle
+$ truffle init
+
+
+Writing a “Hello World” Smart Contract
+
+All the contracts should be written in the “contracts” directory. We will switch to this directory and create a contract with the name “HelloWorld.sol”
+
+
+Configuring Truffle Migration
+To migrate our Smart Contract, we will have to add a file in the “migrations” directory in the “truffle” directory. In this directory we will add a file named “2_deploy_contracts.js” with the following contents in it:To run truffle on our network, we need to edit the “truffle.js” file in the “truffle” directory. Open this file and make the following entries:
+
+Replace the “from” address with the address of the account you created in the previous step.
+
+Inside truffle Directory:
+$ truffle compile
+
+
+
+> personal.unlockAccount(web3.eth.coinbase)
+> miner.start()
+
+
+
+$ truffle migrate
+
+
+
+Transaction:
+eth.sendTransaction({from: "0xceee57f2b700c2f37d1476a7974965e149fce2d4",to: "0x7aa4a14286a25e3a275d7a122c23dc3c107a636a", value: "74000000000000000"})
+
+
+
+
+
+
+
+
