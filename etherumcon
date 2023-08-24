@@ -45,9 +45,9 @@ geth --datadir ./datadir account new   //if you want to create preaccounts
 Running the Ethereum Private Network
 $ geth --datadir ./dataDir init ./genesis.json
 
-$ geth --port 4321 --networkid 1234 --datadir=./dataDir  --rpc --rpcport 8543 --rpcaddr 127.0.0.1  --rpcapi "eth,net,web3,personal,miner" --allow-insecure-unlock
+$ geth --port 4321 --networkid 1234 --datadir=./datadir  --rpc --rpcport 8543 --rpcaddr 127.0.0.1  --rpcapi "eth,net,web3,personal,miner" --allow-insecure-unlock
 
-$geth --port 4321 --networkid 1234 --datadir=./dataDir  --rpc --rpccorsdomain "https://remix.ethereum.org" console --rpcport 8543 --rpcaddr 127.0.0.1  --rpcapi "eth,net,web3,personal,miner" --allow-insecure-unlock
+$geth --port 4321 --networkid 1234 --datadir=./datadir  --rpc --rpccorsdomain "https://remix.ethereum.org" console --rpcport 8543 --rpcaddr 127.0.0.1  --rpcapi "eth,net,web3,personal,miner" --allow-insecure-unlock
 
 
 
