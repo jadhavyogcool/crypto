@@ -1,4 +1,4 @@
-//https://medium.com/@adeolasola01/building-a-supply-chain-management-smart-contract-using-quicknode-rpc-988c0d23cf43
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
